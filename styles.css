@@ -1,0 +1,141 @@
+/* General reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 50px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Skills Section - Flexbox Layout */
+  .skill-set {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Project Cards */
+  .project-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect to zoom-in cards */
+  .project-card:hover,
+  .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Scroll effect: zoom-out effect when card is in view */
+  .project-card,
+  .skill-card {
+    transform: scale(1);
+  }
+  
+  /* Applying the scale effect during scrolling */
+  @keyframes scrollZoomOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.95); /* Slight zoom-out on scroll */
+    }
+  }
+  
+  /* Using JavaScript to apply the animation when the cards come into view */
+  .project-card, .skill-card {
+    animation: scrollZoomOut 0.5s ease-out forwards;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-top: 10px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .skill-set {
+      flex-direction: column;
+    }
+  }
+  
